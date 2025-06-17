@@ -8,17 +8,17 @@ import os
 from openai import OpenAI
 from utils.generate_message import generate_message
 from utils.get_diff import get_diff
-
+from constants import SAFE_EXIT, UNSAFE_EXIT
 
 def main():
     if len(sys.argv) < 2:
         print("Usage: python main.py <fichier_message>")
-        sys.exit(1)
+        sys.exit(UNSAFE_EXIT)
 
     diff = get_diff()
     if not diff.strip():
         print("Aucune modification détectée.")
-        sys.exit(0)
+        sys.exit(SAFE_EXIT)
 
     message = generate_message(diff)
     with open(sys.argv[1], "w") as f:

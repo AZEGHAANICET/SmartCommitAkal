@@ -1,6 +1,8 @@
 from openai import OpenAI
 import os
 from prompts import PROMPT
+from constants import MODEL, MAX_TOKENS, TEMPERATURE
+
 def generate_message(diff):
     """
     Génère un message de commit Git pertinent à partir d'une différence (diff) de code en utilisant l'API OpenAI.
@@ -32,10 +34,10 @@ def generate_message(diff):
         client = OpenAI(api_key=api_key)
 
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model=MODEL,
             messages=[{"role": "user", "content": PROMPT.format(diff=diff)}],
-            max_tokens=100,
-            temperature=0.7
+            max_tokens=MAX_TOKENS,
+            temperature=TEMPERATURE
         )
 
         content = response.choices[0].message.content.strip()
