@@ -58,11 +58,17 @@ chmod +x .git/hooks/commit-msg
 ## Structure du projet
 
 ```
-SmartCommitAkal/
-├── main.py                    # Script principal générant le message de commit
+smartcommitakal/
+├── main.py
+├── prompts.py
+├── README.md
+├── requirements.txt
 ├── hooks/
-│   └── commit-msg             # Hook Git pour générer automatiquement le message de commit
-└── requirements.txt           # Liste des dépendances Python
+│   └── commit-msg
+├── utils/
+│   ├── generate_message.py
+│   └── get_diff.py
+└── venv/
 ```
 
 ---
