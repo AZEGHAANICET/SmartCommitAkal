@@ -112,13 +112,6 @@ git commit -m "a"
 ---
 
 ## Contact
-
 Pour toute question ou contribution, contactez-moi ou ouvrez une issue sur le dépôt.
-
----
-
-*Bonne utilisation de SmartCommit !*
-## Contact
-
-Pour toute question, n’hésitez pas à me contacter :  
 📧 loicanicetazegha@gmail.com
+*Bonne utilisation de SmartCommit !*
