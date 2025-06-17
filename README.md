@@ -1,29 +1,26 @@
 # SmartCommit 🤖
 
-Générateur automatique de messages de commit avec l'IA.
+**Générateur automatique de messages de commit avec l’IA.**
 
+---
 
 ## Configuration
 
-Définissez votre clé API OpenAI :
-Tout d'abord installer l'application Git bash
-Ensuite taper la commande suivante :
+1. Installez Git Bash (pour Windows) si ce n’est pas déjà fait.
+
+2. Définissez votre clé API OpenAI dans votre terminal avec la commande suivante :
 
 ```bash
-set OPENAI_API_KEY="votre-clé-api"
-```
+# Windows (Git Bash)
+export OPENAI_API_KEY="votre-clé-api"
 
-## Structure
+# Linux/macOS
+export OPENAI_API_KEY="votre-clé-api"
 
 ```
 SmartCommitAkal/
-├── main.py                    # Script principal
+├── main.py                    # Script principal générant le message de commit
 ├── hooks/
-│   └── commit-msg  # Hook Git
-└── requirements.txt           # Dépendances
+│   └── commit-msg             # Hook Git pour générer automatiquement le message de commit
+└── requirements.txt           # Liste des dépendances Python
 ```
-
-## Utilisation
-
-1. `git add .` - Ajouter vos fichiers
-2. `git commit -m "a"` - SmartCommit génère le message automatiquement
